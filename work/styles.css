@@ -1,0 +1,253 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ /*  PAGE FADE-IN ANIMATION */
+ body {
+     background-image: url("Images/bagels.jpg");
+     font-family: "Roboto", Arial, Helvetica, sans-serif;
+     animation: fadeIn 1.2s ease-in;
+ }
+
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
+
+ h1 {
+     background-color: #efe5d6;
+     border-bottom: 3px solid #c9b59b;
+ }
+
+ .fontsize {
+     font-size: 20px;
+ }
+
+ .signature {
+     font-family: cursive;
+     font-size: 40px;
+ }
+
+ .wrapper {
+     max-width: 1200px;
+     margin: auto;
+ }
+
+ /* HEADER */
+ header {
+     text-align: center;
+     padding: 10px 0;
+ }
+
+ /* FLOATING LOGO ANIMATION */
+ header img {
+     width: 400px;
+     height: auto;
+     animation: floatLogo 3s ease-in-out infinite;
+ }
+
+ @keyframes floatLogo {
+     0% {
+         transform: translateY(0);
+     }
+
+     50% {
+         transform: translateY(-8px);
+     }
+
+     100% {
+         transform: translateY(0);
+     }
+ }
+
+ /* NAV */
+ nav {
+     background: #c86b2b;
+ }
+
+ nav ul {
+     list-style: none;
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+ }
+
+ nav ul li {
+     margin: 0 20px;
+ }
+
+ nav ul li a {
+     display: block;
+     padding: 18px 0;
+     text-decoration: none;
+     color: #fff;
+     font-weight: 600;
+     font-size: 14px;
+     letter-spacing: 1px;
+     transition: 0.3s ease;
+ }
+
+ nav ul li a:hover {
+     color: black;
+ }
+
+ /* MAIN SECTION */
+ section.main-content {
+     padding: 50px;
+ }
+
+ /* GRID */
+ .grid {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 30px;
+ }
+
+ /* ARTICLE CARDS */
+ article {
+     background: #ffffff;
+     border-radius: 16px;
+     overflow: hidden;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     padding: 20px;
+     text-align: center;
+     flex: 1 1 280px;
+     max-width: 350px;
+
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+
+     /* ✅ CARD ENTRANCE ANIMATION */
+     animation: cardFadeUp 0.8s ease forwards;
+     opacity: 0;
+ }
+
+ .video-card video {
+     width: 100%;
+     border-radius: 12px;
+     margin-bottom: 15px;
+     transition: transform 0.3s ease;
+ }
+
+ /* subtle animation */
+ .video-card video:hover {
+     transform: scale(1.03);
+ }
+
+ .video-controls {
+     display: flex;
+     justify-content: center;
+     gap: 10px;
+     margin-bottom: 10px;
+ }
+
+ .video-controls button {
+     padding: 8px 15px;
+     border: none;
+     border-radius: 20px;
+     background: #c86b2b;
+     color: white;
+     cursor: pointer;
+     transition: 0.3s ease;
+ }
+
+ .video-controls button:hover {
+     background: black;
+ }
+
+ @keyframes cardFadeUp {
+     from {
+         opacity: 0;
+         transform: translateY(20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ article:hover {
+     transform: translateY(-6px);
+     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+ }
+
+ article img {
+     width: 100%;
+     border-radius: 12px;
+     margin-bottom: 15px;
+ }
+
+ article h2 {
+     font-size: 20px;
+     margin-bottom: 10px;
+     color: #222;
+ }
+
+ article p {
+     font-size: 14px;
+     color: #555;
+     margin-bottom: 10px;
+ }
+
+ /* BUTTON STYLE */
+ .highlight {
+     display: inline-block;
+     padding: 12px 25px;
+     background: linear-gradient(45deg, #ff7a18, #ffb347);
+     color: #fff;
+     font-weight: 600;
+     border-radius: 30px;
+     margin-top: 10px;
+     cursor: pointer;
+     transition: 0.3s ease;
+ }
+
+ .highlight:hover {
+     opacity: 0.85;
+ }
+
+ /* INFO SECTION */
+ section.info-section {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 30px;
+     padding: 50px;
+     background: #f7f7f7;
+ }
+
+ aside {
+     flex: 1;
+     min-width: 250px;
+ }
+
+ aside h3 {
+     font-size: 18px;
+     margin-bottom: 10px;
+     color: #222;
+ }
+
+ aside p {
+     font-size: 14px;
+     color: #555;
+     line-height: 1.6;
+ }
+
+ /* FOOTER */
+ footer {
+     text-align: center;
+     padding: 25px;
+     background: #c86b2b;
+     color: #fff;
+     font-size: 14px;
+ }
